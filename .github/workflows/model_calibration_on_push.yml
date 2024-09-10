@@ -60,7 +60,7 @@ jobs:
     - name: Commit and Push Changes
       run: |
         git config --global user.email "vick.viggy@gmail.com"
-        git config --global user.name "VigneshSankar01"
+        git config --global user.name "Vignesh S"
         git add $GITHUB_WORKSPACE/metrics/$metrics_filename $GITHUB_WORKSPACE/models/$model_filename
         git commit -m "Add metrics and updated model"
         git push
