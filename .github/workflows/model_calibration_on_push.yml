@@ -44,6 +44,8 @@ jobs:
       run: |
         timestamp=$(cat timestamp.txt) # Use the timestamp in your training script
         mkdir -p $GITHUB_WORKSPACE/metrics/
+        pip uninstall scikit-learn
+        pip install scikit-learn
         sudo python ./src/evaluate_model.py  --timestamp "$timestamp" # Assuming you have a script for model evaluation
         metrics_filename="${timestamp}_metrics.json"
         mv $metrics_filename $GITHUB_WORKSPACE/metrics/$metrics_filename
